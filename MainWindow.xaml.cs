@@ -24,19 +24,22 @@ namespace Frames
 
         private void OnPageOne(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new Page1();
+            MainFrame.Navigate(new Page1());
+
 
         }
 
         private void OnPageTwo(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new Page2();
+            MainFrame.Navigate(new Page2());
+
 
         }
 
         private void OnPageThree(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new Page3();
+            MainFrame.Navigate(new Page3());
+
 
         }
     }

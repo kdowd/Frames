@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Background="LightPink"
         Title="MainWindow" Height="450" Width="800">
-    <Grid ShowGridLines="True">
+    <Grid ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -15,14 +15,15 @@
 
         <Rectangle Fill="Black" Grid.Row="0" />
 
-        <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="auto">
+
+        <WrapPanel Panel.ZIndex="10" VerticalAlignment="Center" HorizontalAlignment="Center" Width="auto">
             <Button Click="OnPageOne">Page One</Button>
             <Button Margin="20 0 20 0 " Click="OnPageTwo">Page Two</Button>
             <Button Click="OnPageThree">Page Three</Button>
         </WrapPanel>
 
 
-        <Frame NavigationUIVisibility="Hidden" Source="Pages/Page1.xaml" Grid.Row="1" x:Name="MainFrame" Background="Azure"   />
+        <Frame Grid.RowSpan="2" Panel.ZIndex="1" NavigationUIVisibility="Hidden" Source="Pages/Page1.xaml" Grid.Row="1" x:Name="MainFrame" Background="Azure"   />
 
     </Grid>
 </Window>
